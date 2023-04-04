@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCOLATRICE"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Primo numero"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Secondo numero"
+        android:inputType="number"/>
+
+    <RadioGroup
+        android:id="@+id/operations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal">
+
+        <RadioButton
+            android:id="@+id/rad_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add" />
+
+        <RadioButton
+            android:id="@+id/rad_sott"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sott" />
+
+        <RadioButton
+            android:id="@+id/rad_molt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Molt" />
+
+        <RadioButton
+            android:id="@+id/rad_div"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Div" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCOLA"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/resoult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Risultato"
+        android:enabled="false"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        />
+
+</LinearLayout>
