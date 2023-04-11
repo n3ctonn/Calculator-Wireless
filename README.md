@@ -1,37 +1,12 @@
-# CalculatorWirelessSure! Here's a documentation for the CalculatorWireless GitHub project:
+CALCULATOR WIRELESS
 
-CalculatorWireless
-CalculatorWireless is a simple calculator application built using Python and Tkinter that allows users to perform basic arithmetic operations. It includes a wireless feature that enables multiple users to perform calculations on the same calculator instance simultaneously.
+This is a code written in Java for an Android application that implements a wireless calculator that sends a request to the server via the HTTP protocol to perform an arithmetic operation and receive the result.
 
-Installation
-To install CalculatorWireless, follow these steps:
+The MainActivity class extends the AppCompatActivity class and is used to define application behavior. In the onCreate method, the layout of the application is set using the activity_main.xml XML file. The EditText objects for the two input numbers, the EditText object for the result, and the RadioButtons to select the operation are then initialized. The button to submit the request is also initialized.
 
-Clone this repository to your local machine using the command:
-bash
-Copy code
-git clone https://github.com/n3ctonn/CalculatorWireless.git
-Install the required packages by running:
-bash
-Copy code
-pip install -r requirements.txt
-Usage
-To launch CalculatorWireless, navigate to the project directory and run the command:
+Inside the submit button listener, the values ​​of the two input numbers and the operation selected by the RadioButton are read. These values ​​are then used to construct the HTTP request URL which is sent to the server using the Volley library. The response from the server is then parsed using the XMLPullParser parser to extract the result of the operation. The result is then converted to a string and displayed in the EditText object for the result.
 
-bash
-Copy code
-python calculator.py
-This will launch the calculator application on your local machine.
-
-Features
-CalculatorWireless includes the following features:
-
-Basic arithmetic operations: addition, subtraction, multiplication, and division.
-Wireless feature that enables multiple users to perform calculations on the same calculator instance simultaneously.
-Implementation
-CalculatorWireless is built using the following technologies:
-
-Python 3.8
-Tkinter for the graphical user interface (GUI)
+The activity_main.xml XML file defines the user interface of the application. It contains a TextView for the application title, two EditTexts for input numbers, a RadioGroup to select the operation and a Button to send the request.
 Socket programming for the wireless feature
 The application uses a client-server model for the wireless feature. When a user launches the calculator, they become the server and wait for other users to connect. Other users can then connect to the server and perform calculations on the same instance of the calculator.
 
